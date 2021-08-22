@@ -10,8 +10,9 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: sqlite3                   # Database vendor (soon, postgres)
+  database: db/development.sqlite3   # File path of the database
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
